@@ -1,0 +1,32 @@
+sequenceDiagram
+    participant CLI as CLI (cmd_hr)
+    participant VR as VideoReader
+    participant FD as FaceDetector
+    participant SE as SignalExtractor
+    participant HR as HeartRateEstimator
+    
+    CLI->>VR: read_video_frames(video_path)
+    VR-->>CLI: frames (np.ndarray), fps (float)
+    
+    CLI->>FD: FaceDetector()
+    CLI->>SE: extract_rgb_signals(frames, FD)
+    
+    loop For each frame
+        FD->>FD: detect_faces(frame)
+        FD-->>SE: landmarks (Optional[np.ndarray])
+        SE->>SE: get_skin_patches(frame, landmarks)
+        SE-->>FD: skin_patches (Optional[np.ndarray])
+    end
+    
+    SE-->>CLI: signals (frames, patches, 3)
+    CLI->>SE: get_green_channel(signals)
+    SE-->>CLI: green_signals (frames, patches)
+    
+    CLI->>HR: estimate_heart_rate(green_signals, fps)
+    HR->>HR: detrend(signals)
+    HR->>HR: bandpass_filter(detrended, fs=fps)
+    HR->>HR: np.fft.rfft(filtered)
+    HR->>HR: find_peak_frequency()
+    HR-->>CLI: (heart_rate_bpm, quality_score)
+    
+    CLI->>CLI: print results

@@ -1,0 +1,353 @@
+{
+  "classifier": {
+    "clips": 82,
+    "pairs": 41,
+    "accuracy": 0.5853658536585366,
+    "auc": 0.6347412254610352,
+    "auc_95ci_bootstrap": [
+      0.5068411659726353,
+      0.7471891731112432
+    ],
+    "permutation_p": 0.03482587064676617,
+    "accuracy_by_model": {
+      "Kling": 0.7,
+      "ModelScope": 0.65,
+      "Pika": 0.45,
+      "SVD": 0.6,
+      "Sora": 0.0
+    },
+    "auc_by_model": {
+      "Kling": 0.72,
+      "ModelScope": 0.75,
+      "Pika": 0.59,
+      "SVD": 0.61
+    }
+  },
+  "pooled_features": {
+    "mean_coherence": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.43723973825104107,
+      "pairs_real_higher": "23/41",
+      "sign_test_p": 0.5327092552361137,
+      "wilcoxon_p": 0.36821082676488004,
+      "mean_real": 0.6078891262457544,
+      "mean_fake": 0.5671197452743529
+    },
+    "min_coherence": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.5044616299821535,
+      "pairs_real_higher": "19/41",
+      "sign_test_p": 0.755228657504631,
+      "wilcoxon_p": 0.9489011496671083,
+      "mean_real": 0.46440094713813945,
+      "mean_fake": 0.4495013487277057
+    },
+    "hr_spread_bpm": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.5797144556811421,
+      "pairs_real_higher": "8/41",
+      "sign_test_p": 0.0241195447742939,
+      "wilcoxon_p": 0.16273834975716306,
+      "mean_real": 27.212543554006963,
+      "mean_fake": 36.857142857142854
+    },
+    "quality": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.6157049375371803,
+      "pairs_real_higher": "18/41",
+      "sign_test_p": 0.5327092552361137,
+      "wilcoxon_p": 0.1713503034607129,
+      "mean_real": 0.14543836802931948,
+      "mean_fake": 0.17176373378135887
+    },
+    "band_fraction": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.38905413444378345,
+      "pairs_real_higher": "24/41",
+      "sign_test_p": 0.34888887944907765,
+      "wilcoxon_p": 0.05795002135891991,
+      "mean_real": 0.09381886929217664,
+      "mean_fake": 0.06170467158099269
+    },
+    "frame_to_frame_std": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.4396192742415229,
+      "pairs_real_higher": "25/41",
+      "sign_test_p": 0.21102359760880063,
+      "wilcoxon_p": 0.2517262536812268,
+      "mean_real": 5.723691973801821,
+      "mean_fake": 5.381555761655754
+    },
+    "brightness": {
+      "pairs": 41,
+      "auc_fake_vs_real": 0.5026769779892921,
+      "pairs_real_higher": "21/41",
+      "sign_test_p": 1.0,
+      "wilcoxon_p": 0.8878708392185217,
+      "mean_real": 130.00373313312554,
+      "mean_fake": 129.109060266726
+    }
+  },
+  "per_model_features": {
+    "Kling": {
+      "mean_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.3,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.232421875,
+        "mean_real": 0.6569564824572077,
+        "mean_fake": 0.5619322393880102
+      },
+      "min_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.39,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.431640625,
+        "mean_real": 0.5210456005560393,
+        "mean_fake": 0.46044379123946166
+      },
+      "hr_spread_bpm": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.54,
+        "pairs_real_higher": "3/10",
+        "sign_test_p": 0.5078125,
+        "wilcoxon_p": 0.88671875,
+        "mean_real": 25.2,
+        "mean_fake": 25.200000000000006
+      },
+      "quality": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.62,
+        "pairs_real_higher": "4/10",
+        "sign_test_p": 0.75390625,
+        "wilcoxon_p": 0.845703125,
+        "mean_real": 0.14991813763402861,
+        "mean_fake": 0.1654986536816124
+      },
+      "band_fraction": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.13999999999999996,
+        "pairs_real_higher": "9/10",
+        "sign_test_p": 0.021484375,
+        "wilcoxon_p": 0.00390625,
+        "mean_real": 0.0613803880092042,
+        "mean_fake": 0.014469372521906401
+      },
+      "frame_to_frame_std": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.28,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.130859375,
+        "mean_real": 3.6668411954275038,
+        "mean_fake": 2.1704001585357906
+      },
+      "brightness": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.56,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 0.76953125,
+        "mean_real": 123.96399666883205,
+        "mean_fake": 130.04108141731598
+      }
+    },
+    "ModelScope": {
+      "mean_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.32,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.193359375,
+        "mean_real": 0.5909480789225292,
+        "mean_fake": 0.5067442863806653
+      },
+      "min_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.47,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 1.0,
+        "mean_real": 0.39359849091406834,
+        "mean_fake": 0.39250150852340554
+      },
+      "hr_spread_bpm": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.88,
+        "pairs_real_higher": "0/10",
+        "sign_test_p": 0.0078125,
+        "wilcoxon_p": 0.0078125,
+        "mean_real": 15.0,
+        "mean_fake": 57.0
+      },
+      "quality": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.55,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 1.0,
+        "mean_real": 0.1411674824178057,
+        "mean_fake": 0.14096546927293113
+      },
+      "band_fraction": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.43000000000000005,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 0.6953125,
+        "mean_real": 0.11395622855201906,
+        "mean_fake": 0.09455753231435367
+      },
+      "frame_to_frame_std": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.59,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 1.0,
+        "mean_real": 7.382735651744684,
+        "mean_fake": 10.299268565530411
+      },
+      "brightness": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.6199999999999999,
+        "pairs_real_higher": "4/10",
+        "sign_test_p": 0.75390625,
+        "wilcoxon_p": 0.375,
+        "mean_real": 128.5856948241412,
+        "mean_fake": 141.63712654489836
+      }
+    },
+    "Pika": {
+      "mean_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.53,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 0.921875,
+        "mean_real": 0.5047995865840094,
+        "mean_fake": 0.4940153680302794
+      },
+      "min_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.55,
+        "pairs_real_higher": "3/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.845703125,
+        "mean_real": 0.3915409517040742,
+        "mean_fake": 0.38276631930267546
+      },
+      "hr_spread_bpm": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.555,
+        "pairs_real_higher": "2/10",
+        "sign_test_p": 0.6875,
+        "wilcoxon_p": 0.5625,
+        "mean_real": 28.0,
+        "mean_fake": 36.0
+      },
+      "quality": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.5800000000000001,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 0.556640625,
+        "mean_real": 0.16122125892629355,
+        "mean_fake": 0.18022004929394184
+      },
+      "band_fraction": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.22999999999999998,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.130859375,
+        "mean_real": 0.08459241136459503,
+        "mean_fake": 0.017853698665409
+      },
+      "frame_to_frame_std": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.29,
+        "pairs_real_higher": "8/10",
+        "sign_test_p": 0.109375,
+        "wilcoxon_p": 0.16015625,
+        "mean_real": 5.002122676491342,
+        "mean_fake": 2.3122690925531777
+      },
+      "brightness": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.49999999999999994,
+        "pairs_real_higher": "4/10",
+        "sign_test_p": 0.75390625,
+        "wilcoxon_p": 0.76953125,
+        "mean_real": 122.5953079208974,
+        "mean_fake": 125.85922882584737
+      }
+    },
+    "SVD": {
+      "mean_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.52,
+        "pairs_real_higher": "4/10",
+        "sign_test_p": 0.75390625,
+        "wilcoxon_p": 0.6953125,
+        "mean_real": 0.6964945276539128,
+        "mean_fake": 0.700937805366966
+      },
+      "min_coherence": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.49000000000000005,
+        "pairs_real_higher": "4/10",
+        "sign_test_p": 0.75390625,
+        "wilcoxon_p": 0.845703125,
+        "mean_real": 0.5745362521398382,
+        "mean_fake": 0.5538392089066451
+      },
+      "hr_spread_bpm": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.425,
+        "pairs_real_higher": "3/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 0.375,
+        "mean_real": 38.57142857142857,
+        "mean_fake": 25.71428571428571
+      },
+      "quality": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.71,
+        "pairs_real_higher": "3/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.048828125,
+        "mean_real": 0.13344426063166265,
+        "mean_fake": 0.21117464714156778
+      },
+      "band_fraction": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.6699999999999999,
+        "pairs_real_higher": "3/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.845703125,
+        "mean_real": 0.12091961380451446,
+        "mean_fake": 0.12012704319424497
+      },
+      "frame_to_frame_std": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.5700000000000001,
+        "pairs_real_higher": "5/10",
+        "sign_test_p": 1.0,
+        "wilcoxon_p": 1.0,
+        "mean_real": 7.020937386048994,
+        "mean_fake": 5.4301338228051055
+      },
+      "brightness": {
+        "pairs": 10,
+        "auc_fake_vs_real": 0.42999999999999994,
+        "pairs_real_higher": "7/10",
+        "sign_test_p": 0.34375,
+        "wilcoxon_p": 0.16015625,
+        "mean_real": 139.45401752591866,
+        "mean_fake": 119.16923276566786
+      }
+    }
+  }
+}

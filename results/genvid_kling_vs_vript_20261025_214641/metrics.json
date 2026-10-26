@@ -1,0 +1,47 @@
+{
+  "videos_total": 204,
+  "videos_with_face": 203,
+  "videos_without_face": [
+    "data/genvidbench/kling_vs_vript/real/yt_--CKgCA9B9U_9U-Scene-009.mp4"
+  ],
+  "windows": 609,
+  "windows_real": 456,
+  "windows_fake": 153,
+  "chance_window_accuracy": 0.7487684729064039,
+  "fold_window_accuracy": [
+    0.7560975609756098,
+    0.7560975609756098,
+    0.7398373983739838,
+    0.75,
+    0.75
+  ],
+  "mean_window_accuracy": 0.7504065040650406,
+  "window_roc_auc": 0.6414832014677216,
+  "video_accuracy": 0.7487684729064039,
+  "video_balanced_accuracy": 0.5,
+  "window_balanced_accuracy": 0.5032679738562091,
+  "video_roc_auc": 0.6940144478844168,
+  "feature_auc_fake_vs_real": {
+    "mean_coherence": 0.3383786263043229,
+    "min_coherence": 0.3764906547414288,
+    "hr_spread_bpm": 0.5761595573902075,
+    "quality": 0.373552344914574
+  },
+  "feature_means": {
+    "real": {
+      "mean_coherence": 0.5445,
+      "min_coherence": 0.4104,
+      "hr_spread_bpm": 25.2193,
+      "quality": 0.1764
+    },
+    "fake": {
+      "mean_coherence": 0.4444,
+      "min_coherence": 0.3194,
+      "hr_spread_bpm": 32.1569,
+      "quality": 0.1455
+    }
+  },
+  "paired": {
+    "pairs": 0
+  }
+}

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Datasets, videos and model files: large, separately licensed, downloaded by hand (see README)
+/data/
+
+# Logs and MetaGPT scratch output from the original code generation
+/logs/
+/workspace/
+/workspace.bak/
+
+# Experiment output: keep the tables and metrics, drop bulky caches and trained models
+/results/*/signals/
+/results/*/*.joblib
+
+# Trained models and local video files anywhere else
+*.joblib
+*.mp4
+*.avi
+*.mov
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/

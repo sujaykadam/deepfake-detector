@@ -1,0 +1,95 @@
+classDiagram
+    class Main {
+        <<entry point>>
+        +main() int
+    }
+    
+    class VideoReader {
+        -video_path: str
+        +read_video_frames() tuple[np.ndarray, float]
+        +get_video_info() dict
+    }
+    
+    class FaceDetector {
+        -_previous_landmarks: Optional[np.ndarray]
+        -_dropped_frames: int
+        +detect_faces() Optional[np.ndarray]
+        +get_skin_patches() np.ndarray
+        +process_frame() Tuple[Optional[np.ndarray], bool]
+        +reset()
+    }
+    
+    class SignalExtractor {
+        +extract_rgb_signals() np.ndarray
+        +get_green_channel() np.ndarray
+        +compute_mean_rgb_per_patch() np.ndarray
+        +extend_signal_methods() np.ndarray
+        +normalize_signals() np.ndarray
+    }
+    
+    class HeartRateEstimator {
+        +detrend() np.ndarray
+        +bandpass_filter() np.ndarray
+        +estimate_heart_rate() Tuple[float, float]
+        +estimate_heart_rate_per_patch() np.ndarray
+    }
+    
+    class CoherenceAnalyzer {
+        +compute_coherence_matrix() np.ndarray
+        +extract_window_features() np.ndarray
+        +get_window_boundaries() List[Tuple[int, int]]
+    }
+    
+    class DeepfakeClassifier {
+        -model: LogisticRegression
+        +extract_features() np.ndarray
+        +train()
+        +predict() np.ndarray
+        +predict_proba() np.ndarray
+        +classify_video() Tuple[str, float]
+        +save()
+        +load()
+    }
+    
+    class Evaluator {
+        +evaluate_heart_rate_accuracy() float
+        +cross_validate_classifier() Dict[str, List[float]]
+        +evaluate_with_group_kfold() Dict
+        +validate_group_kfold() bool
+        +evaluate_detector_on_video() Dict
+        +load_manifest_csv() pd.DataFrame
+        +prepare_training_data() Tuple[np.ndarray, np.ndarray, np.ndarray]
+    }
+    
+    class CLI {
+        +main() int
+        +cmd_hr()
+        +cmd_train()
+        +cmd_predict()
+    }
+    
+    class Constants {
+        <<constant>>
+        +FOREHEAD_LANDMARKS: List[int]
+        +LEFT_CHEEK_LANDMARKS: List[int]
+        +RIGHT_CHEEK_LANDMARKS: List[int]
+        +SKIN_PATCHES: List[List[int]]
+    }
+
+    Main --> CLI
+    CLI --> VideoReader
+    CLI --> FaceDetector
+    CLI --> SignalExtractor
+    CLI --> HeartRateEstimator
+    CLI --> CoherenceAnalyzer
+    CLI --> DeepfakeClassifier
+    CLI --> Evaluator
+    
+    FaceDetector --> Constants
+    SignalExtractor --> FaceDetector
+    SignalExtractor --> Constants
+    HeartRateEstimator --> SignalExtractor
+    CoherenceAnalyzer --> HeartRateEstimator
+    DeepfakeClassifier --> CoherenceAnalyzer
+    Evaluator --> DeepfakeClassifier
+    Evaluator --> HeartRateEstimator

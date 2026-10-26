@@ -1,0 +1,18 @@
+{
+  "manifest": "data/genvidbench/kling_full/manifest.csv",
+  "window_seconds": 3.0,
+  "step_seconds": 1.0,
+  "splits": 5,
+  "features": [
+    "mean_coherence",
+    "min_coherence",
+    "hr_spread_bpm",
+    "quality"
+  ],
+  "python": "3.11.13",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "face_model": "/Users/sujaykadam/Documents/Docs/Repos/deepfake-detector/data/models/face_landmarker.task",
+  "date": "2026-10-25 22:46:13"
+}

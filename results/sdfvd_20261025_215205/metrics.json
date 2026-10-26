@@ -1,0 +1,64 @@
+{
+  "videos_total": 106,
+  "videos_with_face": 101,
+  "videos_without_face": [
+    "data/sdfvd/SDFVD/videos_real/v15.mp4",
+    "data/sdfvd/SDFVD/videos_real/v50.mp4",
+    "data/sdfvd/SDFVD/videos_fake/vs14.mp4",
+    "data/sdfvd/SDFVD/videos_fake/vs15.mp4",
+    "data/sdfvd/SDFVD/videos_fake/vs50.mp4"
+  ],
+  "windows": 197,
+  "windows_real": 99,
+  "windows_fake": 98,
+  "chance_window_accuracy": 0.5025380710659899,
+  "fold_window_accuracy": [
+    0.6,
+    0.5,
+    0.525,
+    0.5128205128205128,
+    0.47368421052631576
+  ],
+  "mean_window_accuracy": 0.5223009446693657,
+  "window_roc_auc": 0.5289631003916719,
+  "window_auc_permutation_p": 0.31343283582089554,
+  "video_accuracy": 0.5445544554455446,
+  "video_balanced_accuracy": 0.542156862745098,
+  "window_balanced_accuracy": 0.5225726654298083,
+  "video_roc_auc": 0.5266666666666667,
+  "feature_auc_fake_vs_real": {
+    "mean_coherence": 0.5202020202020202,
+    "min_coherence": 0.5394763966192538,
+    "hr_spread_bpm": 0.5041743970315399,
+    "quality": 0.46897546897546893
+  },
+  "feature_means": {
+    "real": {
+      "mean_coherence": 0.5074,
+      "min_coherence": 0.3643,
+      "hr_spread_bpm": 33.9394,
+      "quality": 0.1623
+    },
+    "fake": {
+      "mean_coherence": 0.5119,
+      "min_coherence": 0.3829,
+      "hr_spread_bpm": 35.2041,
+      "quality": 0.1542
+    }
+  },
+  "paired": {
+    "pairs": 50,
+    "hr_bpm": {
+      "mean_real": 63.22041567585409,
+      "mean_fake": 64.21084444667783,
+      "mean_abs_pair_diff": 11.668000247587232,
+      "wilcoxon_p": 0.49932054210353793
+    },
+    "hr_quality": {
+      "mean_real": 0.2676657582841305,
+      "mean_fake": 0.2579922290849831,
+      "mean_abs_pair_diff": 0.04523675494489225,
+      "wilcoxon_p": 0.2260100302518655
+    }
+  }
+}

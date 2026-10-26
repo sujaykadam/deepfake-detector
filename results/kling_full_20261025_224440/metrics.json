@@ -1,0 +1,62 @@
+{
+  "videos_total": 104,
+  "videos_with_face": 104,
+  "videos_without_face": [],
+  "windows": 312,
+  "windows_real": 207,
+  "windows_fake": 105,
+  "chance_window_accuracy": 0.6634615384615384,
+  "fold_window_accuracy": [
+    0.5396825396825397,
+    0.6190476190476191,
+    0.6190476190476191,
+    0.6031746031746031,
+    0.55
+  ],
+  "mean_window_accuracy": 0.5861904761904763,
+  "window_roc_auc": 0.595077064642282,
+  "window_auc_permutation_p": 0.03980099502487562,
+  "video_accuracy": 0.6442307692307693,
+  "video_balanced_accuracy": 0.6614906832298137,
+  "window_balanced_accuracy": 0.5968944099378881,
+  "video_roc_auc": 0.6389233954451345,
+  "video_roc_auc_95ci": [
+    0.5373949579831934,
+    0.7334763383614316
+  ],
+  "feature_auc_fake_vs_real": {
+    "mean_coherence": 0.4034966643662296,
+    "min_coherence": 0.422866344605475,
+    "hr_spread_bpm": 0.5463077984817115,
+    "quality": 0.3979756153669197
+  },
+  "feature_means": {
+    "real": {
+      "mean_coherence": 0.6238,
+      "min_coherence": 0.4912,
+      "hr_spread_bpm": 27.6331,
+      "quality": 0.173
+    },
+    "fake": {
+      "mean_coherence": 0.5752,
+      "min_coherence": 0.4426,
+      "hr_spread_bpm": 31.6192,
+      "quality": 0.1493
+    }
+  },
+  "paired": {
+    "pairs": 35,
+    "hr_bpm": {
+      "mean_real": 60.00040405797101,
+      "mean_fake": 61.71467657142857,
+      "mean_abs_pair_diff": 15.30440985507247,
+      "wilcoxon_p": 0.4118947303681507
+    },
+    "hr_quality": {
+      "mean_real": 0.17892263882143195,
+      "mean_fake": 0.1839442684507089,
+      "mean_abs_pair_diff": 0.03845147150119525,
+      "wilcoxon_p": 0.3843350024224179
+    }
+  }
+}
